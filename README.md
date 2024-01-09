@@ -1,5 +1,13 @@
 VowelWorm
 =============
+Nawi Notes
+----------
+build with `grunt`
+local serve with `serve` `(npm i -g serve)`
+
+everything is super jank, notable variables are 
+`WINDOW_SIZE`
+`smoothingConstant`
 
 [![Travis Builds][build-status-image]][build-status-url]
 

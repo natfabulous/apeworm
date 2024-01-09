@@ -115,17 +115,17 @@ module.exports = function(grunt) {
       src: [output_dir, 'src/modules/**/*.min.js', 'src/vowelworm.min.js'],
       doc: ['doc','README.html']
     },
-    exec: {
-      jsdoc: {
-        cmd: 'node_modules/jsdoc/jsdoc.js ' +
-             'src/vowelworm.js ' +
-             'src/modules/ ' +
-             '--template node_modules/jaguarjs-jsdoc ' +
-             '--recurse ' +
-             '--destination doc/ ' +
-             '--verbose '
-      }
-    }
+    // exec: {
+    //   jsdoc: {
+    //     cmd: 'node_modules/jsdoc/jsdoc.js ' +
+    //          'src/vowelworm.js ' +
+    //          'src/modules/ ' +
+    //          '--template node_modules/jaguarjs-jsdoc ' +
+    //          '--recurse ' +
+    //          '--destination doc/ ' +
+    //          '--verbose '
+    //   }
+    // }
   });
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-closure-tools');
@@ -136,7 +136,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-exec');
   // Commented out tests since they were for the old version
   //grunt.registerTask('test', 'qunit');
-  grunt.registerTask('doc', ['clean:doc', 'exec:jsdoc', 'markdown', 'replace:readme']);
+  grunt.registerTask('doc', ['clean:doc', 'markdown', 'replace:readme']);
   grunt.registerTask('compile', ['clean:src', 'closureCompiler:modules', 'closureCompiler:core','compile:complete']);
   grunt.registerTask('compile:complete', ['clean:src', 'concat:main', 'closureCompiler:all']);
   // Commented out tests since they were for the old version

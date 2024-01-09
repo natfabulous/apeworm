@@ -67,7 +67,7 @@ window.VowelWorm.Game = function( options ) {
      * @name smoothingConstant
      * @type number
      */
-    game.smoothingConstant = 5;
+    game.smoothingConstant = 1; // default 5
 
     /**
      * Contains all instances of worms for this game
